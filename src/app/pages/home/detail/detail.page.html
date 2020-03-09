@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button color="danger" defaultHref="menu/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="danger">detail</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="love()">
+        <ion-icon color="danger" slot="icon-only" [name]="favory"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Image -->
+  <div>
+    <ion-img [src]="article.urlToImage"></ion-img>
+  </div>
+
+  <div class="ion-padding">
+
+    <!-- Autheur -->
+    <div>
+      <ion-label *ngIf="article.author">Autheur : {{ article.author }}</ion-label>
+    </div>
+
+    <!-- Titre -->
+    <div class="ion-border-bottom ">
+      <ion-text>
+        <h4>{{ article.title }}</h4>
+      </ion-text>
+    </div>
+    
+    <!-- Date de publication -->
+    <div>
+      <ion-label>Publié le {{ article.publishedAt | date: 'medium' : '+0100' : 'fr' }}</ion-label>
+    </div>
+    
+    <!--Description-->
+    <p class="ion-border-bottom">
+      {{ article.description }}
+    </p>
+
+    
+    <!--Contenu-->
+    <p class="ion-border-bottom">
+      {{ article.content }}
+    </p>
+
+  </div>
+
+  <!-- Bouton partager -->
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="danger">
+      <ion-icon color="light" name="share-social"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-fab-button color="light">
+        <ion-icon class="fb" name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon class="tter" name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon class="pt" name="logo-pinterest"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

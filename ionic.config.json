@@ -1,5 +1,7 @@
 {
   "name": "urgentNews",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

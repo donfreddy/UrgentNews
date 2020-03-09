@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  color="danger" defaultHref="menu/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button  color="danger" (click)="clickedSearch()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Rechercher..."></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <!-- Cathegories -->
+  <p>
+    <ion-chip color="primary">
+      <ion-icon name="heart"></ion-icon>
+      <ion-label>Sante</ion-label>
+    </ion-chip>
+    <ion-chip color="secondary">
+      <ion-icon name="desktop"></ion-icon>
+      <ion-label>Technologie</ion-label>
+    </ion-chip>
+    <ion-chip color="tertiary">
+      <ion-icon name="book"></ion-icon>
+      <ion-label>Education</ion-label>
+    </ion-chip>
+    <ion-chip color="success">
+      <ion-icon name="briefcase"></ion-icon>
+      <ion-label>Business</ion-label>
+    </ion-chip>
+    <ion-chip color="warning">
+      <ion-icon name="football"></ion-icon>
+      <ion-label>Sport</ion-label>
+    </ion-chip>
+    <ion-chip color="danger">
+      <ion-icon name="videocam"></ion-icon>
+      <ion-label>Divertissement</ion-label>
+    </ion-chip>
+  </p>
+
+
+</ion-content>
